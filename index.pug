@@ -7,16 +7,118 @@ html(lang="es")
     meta(name="description" content="")
   body
     +topbar
-    +navigation(false)
+    //+navigation(false)
   
     #inicio
-      .slider
-        div: img(src="//placehold.it/1200x400")
-        div: img(src="//placehold.it/1200x400")
+      .section
+        .container
+          .columns
+            .column.has-text-centered
+              h1: img(src="app/img/RamonaPectu.svg" alt="Ramona Pectu")
+      .section
+        .container
+          .columns
+            .column
+              h2 ¿Quién soy?
+              p Soy Terapeuta especializada en Tanatología Clínica y Biodescodificación.
+    #formacion
+      .section
+        .container
+          .columns
+            .column
+              h2 Formación
+              p Mi formación incluye instituciones nacionales e internacionales como lo son:
+          .columns
+            .column: .card
+                .card-image: figure.image: img(src="app/img/logo_amt.png" alt="Asociación Mexicana de Tantología A.C.")
+                .card-content.has-text-centered
+                  .content: p Asociación Mexicana de Tanatología A.C.
+            .column: .card
+                .card-image: figure.image: img(src="app/img/logo_yg.png" alt="Acreditación por Yohana García Center")
+                .card-content.has-text-centered
+                  .content: p Acreditación por Yohana García Center
+            .column: .card
+                .card-image: figure.image: img(src="app/img/logo_pnl.png" alt="Instituto Mexico-Argentina de Programación Neurolingüistica")
+                .card-content.has-text-centered
+                  .content: p Instituto Mexico-Argentina de Programación Neurolingüistica
+          .columns
+            .column: .card
+                .card-image: figure.image: img(src="app/img/logo_cuam.png" alt="Centro Universitario de Alternativas Médicas")
+                .card-content.has-text-centered
+                  .content: p Centro Universitario de Alternativas Médicas
+            .column: .card
+                .card-image: figure.image: img(src="app/img/logo_bc.png" alt="Instituto Biocyber")
+                .card-content.has-text-centered
+                  .content: p Instituto Biocyber
+            .column: .card
+                .card-image: figure.image: img(src="app/img/logo_ss.png" alt="Certificación por Salomón Sellam")
+                .card-content.has-text-centered
+                  .content: p Certificación por Salomón Sellam
+    .hr
+    #que-hago
+      .section
+        .container
+          .columns
+            .column
+              h2 ¿Qué hago?
+              p Soy terapeuta especializada, cuento con formación en terapias que ayudan a mejorar la calidad de vida en diversas ramas.
+          .columns
+            .column
+              .card
+                .card-header: .card-header-title Asistencia Tanatológica
+                .card-image: figure.image: img(src="app/img/asistencia-tanatologica.jpg" alt="Asistencia Tanatológica")
+                .card-content
+                  .content: p Dirigido a quienes hayan sufrido pérdidas de seres queridos, rupturas de pareja o término de vida laboral por jubilación o despido.
+                  .content.has-text-right: a(href="#tanatologia") Más información
+            .column
+              .card
+                .card-header: .card-header-title Terapia de Biodescodificación
+                .card-image: figure.image: img(src="app/img/terapia-biodescodificacion.jpg" alt="Terapia de Biodescodificación")
+                .card-content
+                  .content: p Parte de un diagnóstico médico y ayuda al consultante a encontrar el programa detrás de su enfermedad.
+                  .content.has-text-right: a(href="#biodescodificacion") Más información
     
-    section.section#nosotros
-      
-    section.section#contacto
+    
+    .hr
+    #tanatologia
+      .section
+        .container
+          .columns
+            .column.is-7
+              h2 Tanatología
+              p.main La asistencia tanatológica es un recurso terapéutico dirigido a todas aquellas personas que han sufrido pérdidas de seres queridos, rupturas de pareja, término de la vida laboral como la jubilación o el despido.
+              p.main Frecuentemente durante el ciclo de vida vamos sufriendo los cambios ineludibles de la vida misma, estas transiciones a veces pasan inadvertidas y poco reconocidas por la familia o por el medio social, la asistencia tanatológica ofrece ayuda ante estas crisis de la vida que de no ser atendidas se van acumulando y dificultan la manera en que enfrentamos las nuevas relaciones o situaciones que nos obliga la vida misma.
+              
+              p.sec Existen pérdidas que son reconocidas de manera anticipada y que es posible manejarlas como son todas aquellas pérdidas de seres queridos que han vivido una enfermedad crónica y terminal, que si bien son dolorosas nos permiten decir adiós, perdonar o pedir perdón o agradecer la relación con la persona que está muriendo, aun así, poder tomar una ayuda neutral y objetiva que propicie una relación en la ausencia física de la persona, facilitará el reacomodo y la adaptación ante el vacío de una relación tenida.
+              
+              p.sec Otro tipo de pérdida, son las muertes inesperadas que tienen un carácter traumático y difícil de superar, el dolor se agudiza y las posibilidades de adaptarnos, acomodarnos ante la ausencia de un ser querido, se extienden a través del tiempo. La ayuda tanatológica posibilita una atención profesional, estableciendo un vínculo nuevo con la persona ausente físicamente.
+              
+              .box
+                p Existen duelos que se vuelven complicados y dolorosos en la medida en que la muerte nos despoja de los hijos, de las parejas, de los padres o de los abuelos, incluso, los animales de compañía llamados también mascotas para muchas personas representan la pérdida de un miembro familiar siendo todas estas susceptibles de ser tratadas mediante la asistencia tanatológica.
+
+                p Dentro de todas las formas en que perdemos a un ser querido, ocupan un lugar importante la ruptura de pareja, ya sea por ruptura amorosa, divorcio o viudez, poder entender la pérdida, decir adiós y prepararnos para seguir viviendo, muchas veces, requiere del apoyo profesional.
+
+                p Reconocer que la pérdida y la muerte van tomadas de la mano con aprender a vivir es una oportunidad para verdaderamente encontrar nuestro lugar y camino en la vida.
+    
+    .hr
+    #biodescodificacion
+      .section
+        .container
+          .columns
+            .column.is-7
+              h2 Biodescodificación
+              p.main La Biodescodificación es una terapia acompañante, que parte de un diagnóstico médico y ayuda al consultante a encontrar el programa que está detrás de la enfermedad. Se basa en la nueva medicina germánica fundada por el doctor Hamer en donde se le atribuye a cada enfermedad un conflicto emocional vivido.
+              p.main: strong En ningún momento pretende sustituir ningún tratamiento medico y se requiere de un diagnóstico, para llegar a descodificar la enfermedad.
+              
+              p.sec Es una herramienta que integra lo biológico (en donde se busca el sentido biológico que tiene la enfermedad), lo psicológico y lo transgeneracional y en donde el descodificador se centra en la búsqueda del conflicto emocional oculto que provoca y alimenta el síntoma, busca aquel conflicto no resuelto que lleva a nuestro inconsciente a poner en marcha un programa biológico de adaptación y supervivencia llamada enfermedad. 
+              
+              p.sec Vivir un evento impactante emocional en soledad, de manera silenciosa y aislada llega a tener un desajuste en nosotros, desencadenando una enfermedad. También vivir circunstancias que no son de nuestro agrado o situaciones que nos incomoda y no hacemos nada para cambiarlo, nos lleva a lo mismo. Nuestros síntomas, nuestros dolores son una expresión del cuerpo ante algo que nosotros no podemos expresar o no queremos hacerlo o simplemente no nos damos cuenta. La enfermedad es la expresión de un desequilibrio proporcional al volumen conflictual.
+
+              .box
+                p Las manifestaciones de nuestra biología, son avisos de nuestro inconsciente (en nuestro inconsciente se encuentra nuestros programas, traumas, nuestros miedos, dolor, todo lo aprendido, todo lo vivido) que albergamos conflictos emocionales activos que no hemos podido o sabido resolver o asimilar. 
+                p Tomar conciencia e identificar el conflicto latente es un paso importante en la descodificación biológica del síntoma y un camino a la recuperación. La conciencia crea tu experiencia de vida.
+              
+              blockquote: p “La enfermedad es el esfuerzo que la naturaleza realiza para curar el cuerpo.”  C.G.Jung
     
     +footer
     
