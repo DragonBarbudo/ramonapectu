@@ -9,6 +9,13 @@
 	],
 "creatorBuild": "26667",
 "files": {
+	"\/.gitattributes": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/.gitattributes",
+		"oF": 0
+		},
 	"\/app\/_app.pug": {
 		"cB": 0,
 		"cOD": 1,
@@ -17,6 +24,16 @@
 		"oAP": "\/app\/_app.html",
 		"oF": 0,
 		"oS": 0
+		},
+	"\/app\/app-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "\/app\/app-min-min.js",
+		"oF": 0,
+		"sC": 0,
+		"tS": 0
 		},
 	"\/app\/app.css": {
 		"aP": 1,

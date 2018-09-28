@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".knowmore").click(function(e){e.preventDefault();var t=$(this).attr("href");$(t).slideDown(),$(this).slideUp()})});

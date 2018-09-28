@@ -5,12 +5,14 @@
 
 $(document).ready(function(){
 
-
+/*
   $('.navbar-burger').click(function(){
     $(this).toggleClass('is-active');
     $( '#menu' ).toggleClass('is-active');
   });
+  */
 /* MENUSCROLL */
+/*
   $('a[href^="#"]').each(function(){
     var url = this.hash;
     $(this).on('click', function (e) {
@@ -56,4 +58,15 @@ $(document).ready(function(){
 
 
   $(".navbar").sticky({topSpacing:0});
+*/
+
+  $('.knowmore').click(function(e){
+    e.preventDefault();
+    var open = $(this).attr('href');
+    $(open).slideDown();
+    $(this).slideUp();
+  });
+
+
+
   });

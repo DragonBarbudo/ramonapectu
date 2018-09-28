@@ -2,6 +2,7 @@
 @w    : #fff;
 @g    : #F3F3F3;
 @purple  : #463C6C;
+@purpleB : #586E82;
 @beige   : #EEEDE2;
 @blue    : #91B6D8;
 
@@ -10,7 +11,7 @@
 }
 
 body{
-  background: @beige;  
+  background: @beige;
 }
 
 
@@ -50,10 +51,12 @@ body{
 
 /* SITE ########################################################## */
 .topbar{
-  background: @g;
-  font-size: 0.8rem;
-  padding: 8px 0;
-  a{color:@b;}
+  background: @purple;
+  font-size: 0.7rem;
+  padding: 4px 0;
+  color:@blue;
+  a{color:@blue;}
+  strong{color:@blue;}
 }
 .navbar{
   background: @w;
@@ -65,11 +68,133 @@ body{
 
 }
 
-#nosotros, #contacto{
-  height: 800px;
-  border-bottom: 2px solid @b;
+
+.hr{
+  width: 100%;
+  height: 100px;
+  background-image: url(img/ramonaPectu-imago.svg);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 40px 0;
 }
 
-footer{
-  background: @g;
+#inicio{
+  background-image: url(img/ramonapectu-bg.jpg);
+  background-position: center bottom;
+  background-size: cover;
+  min-height: 1024px;
+  margin-bottom: -400px;
+  h2{margin-top: 140px;}
+}
+
+h2{
+  font-weight: 900;
+  font-size: 2.4rem;
+  color: @purple;
+  margin-bottom: 10px;
+  margin-top: 40px;
+}
+p{
+  color: @purpleB;
+  font-size: 1.2rem;
+  strong{
+    color:@purple;
+  }
+}
+
+#formacion{
+  .card{
+    .card-content{
+      background: @purple;
+      padding: 8px 4px;
+      .content p{
+        color:@w;
+        font-size: 0.8rem;
+        line-height: 1.1;
+      }
+      position: relative;
+      &:after{
+        content:"";
+        position: absolute;
+        top:100%; left: 0; right:0;
+        width: 100%;
+        height: 12px;
+        background: url(img/shadow.svg) center bottom no-repeat;
+        background-size: 100%;
+      }
+    }
+  }
+}
+
+
+#que-hago{
+  .card{
+    background: transparent;
+    box-shadow: none;
+    .card-header{
+      text-align: center;
+      box-shadow: none;
+    }
+    .card-header-title{
+      justify-content: center;
+      color:@blue;
+      font-weight: bold;
+      font-size: 1.6rem;
+      line-height: 1.2;
+    }
+    p{font-size: 1rem;}
+    a{
+      color:@blue;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+  }
+}
+
+#tanatologia{
+  background-image: url(img/tanatologia.jpg);
+}
+#biodescodificacion{
+  background-image: url(img/biodescodificacion.jpg);
+}
+
+#tanatologia, #biodescodificacion{
+background-size: cover;
+background-position: top left;
+background-repeat: no-repeat;
+  p.main{
+    margin: 20px 0;
+  }
+  p.sec{
+    margin: 40px 0;
+    font-size: .9rem;
+  }
+  p a{
+    display: block;
+    color:@purple;
+    font-size: 1rem;
+    margin: 10px 0;
+    text-align: center;
+    padding: 5px;
+    background: fade(@beige, 70%);
+  }
+  .box{
+    background: @beige;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-radius: 0;
+    border: none;
+    padding: 20px;
+    p{
+      font-size: 0.9rem;
+      margin: 20px 0;
+    }
+  }
+  .box{display: none;}
+  blockquote{
+    padding: 40px;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+  }
 }
