@@ -70,6 +70,12 @@ body {
   background-repeat: no-repeat;
   margin: 40px 0;
 }
+.hr.mid {
+  margin-top: -50px;
+  margin-bottom: -50px;
+  z-index: 999;
+  position: relative;
+}
 #inicio {
   background-image: url(img/ramonapectu-bg.jpg);
   background-position: center bottom;
@@ -115,6 +121,9 @@ p strong {
   background: url(img/shadow.svg) center bottom no-repeat;
   background-size: 100%;
 }
+#que-hago {
+  margin-bottom: 140px;
+}
 #que-hago .card {
   background: transparent;
   box-shadow: none;
@@ -144,11 +153,22 @@ p strong {
 #biodescodificacion {
   background-image: url(img/biodescodificacion.jpg);
 }
+#biodescodificacion .corner path {
+  fill: #141414;
+}
 #tanatologia,
 #biodescodificacion {
+  position: relative;
+  padding: 160px 0;
   background-size: cover;
   background-position: top left;
   background-repeat: no-repeat;
+}
+#tanatologia .corner,
+#biodescodificacion .corner {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 #tanatologia p.main,
 #biodescodificacion p.main {
@@ -192,5 +212,43 @@ p strong {
   font-weight: bold;
   font-size: 1rem;
   text-align: center;
+}
+#contacto {
+  padding: 140px 0;
+}
+#contacto .input,
+#contacto textarea {
+  border: none;
+  border-radius: 0;
+  margin: 8px 0;
+  padding: 30px 10px;
+}
+#contacto .input::placeholder,
+#contacto textarea::placeholder {
+  color: #91B6D8;
+}
+#contacto .button {
+  padding: 30px 10px;
+  line-height: .4;
+  background: #463C6C;
+  color: #91B6D8;
+}
+#contacto .button:hover {
+  background: #586E82;
+}
+#contacto p,
+#contacto a {
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+#contacto a {
+  color: #586E82;
+}
+#contacto iframe {
+  margin: 10px 0;
+}
+.notification.is-info {
+  background: #586E82;
+  display: none;
 }
 /*# sourceMappingURL=app.css.map */

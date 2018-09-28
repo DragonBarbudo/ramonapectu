@@ -10,20 +10,11 @@ $(document).ready(function(){
     $(this).toggleClass('is-active');
     $( '#menu' ).toggleClass('is-active');
   });
-  */
+*/
 /* MENUSCROLL */
-/*
-  $('a[href^="#"]').each(function(){
-    var url = this.hash;
-    $(this).on('click', function (e) {
-      e.preventDefault();
-      $( '#menu' ).removeClass('is-active');
-      $('a.is-active').removeClass('is-active');
-      $('html,body').animate({
-        'scrollTop':$(url).offset().top-$('.navbar').height()
-      }, 400, 'swing');
-    });
 
+
+/*
     $(url).waypoint({
       handler: function() {
         $('a.is-active').removeClass('is-active');
@@ -59,6 +50,15 @@ $(document).ready(function(){
 
   $(".navbar").sticky({topSpacing:0});
 */
+$('.scroll').each(function(){
+    var url = this.hash;
+    $(this).on('click', function (e) {
+      e.preventDefault();
+      $('html,body').animate({
+        'scrollTop':$(url).offset().top
+      }, 400, 'swing');
+    });
+  });
 
   $('.knowmore').click(function(e){
     e.preventDefault();
@@ -67,6 +67,30 @@ $(document).ready(function(){
     $(this).slideUp();
   });
 
+
+
+  window.sr = ScrollReveal({
+    distance : '10%',
+    duration : 1800,
+
+    reset    : true
+  });
+  sr.reveal( 'h2', { origin: 'left' } );
+  ScrollReveal().reveal('h1, .hr', { delay: 500, rotate   : { y: 180 }, });
+  ScrollReveal().reveal('.card', {  });
+
+
+
+  $('form').submit(function(e){
+    $('form button').addClass('is-loading');
+    e.preventDefault();
+      var data = $(this).serialize();
+      $.get('https://dragonbarbudo.com/api/email.php?'+data, function(d){
+        $('form').slideUp();
+        $('.notification').slideDown();
+      })
+
+  });
 
 
   });

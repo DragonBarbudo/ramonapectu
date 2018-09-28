@@ -3,8 +3,8 @@ doctype html
 html(lang="es")
   head
     +head
-    title Sitio
-    meta(name="description" content="")
+    title Ramona Petcu
+    meta(name="description" content="Terapeuta especializada en Tanatología Clínica y Biodescodificación")
   body
     +topbar
     //+navigation(false)
@@ -68,18 +68,19 @@ html(lang="es")
                 .card-image: figure.image: img(src="app/img/asistencia-tanatologica.jpg" alt="Asistencia Tanatológica")
                 .card-content
                   .content: p Dirigido a quienes hayan sufrido pérdidas de seres queridos, rupturas de pareja o término de vida laboral por jubilación o despido.
-                  .content.has-text-right: a(href="#tanatologia") Más información
+                  .content.has-text-right: a(href="#tanatologia").scroll Más información
             .column
               .card
                 .card-header: .card-header-title Terapia de <br>Biodescodificación
                 .card-image: figure.image: img(src="app/img/terapia-biodescodificacion.jpg" alt="Terapia de Biodescodificación")
                 .card-content
                   .content: p Parte de un diagnóstico médico y ayuda al consultante a encontrar el programa detrás de su enfermedad.
-                  .content.has-text-right: a(href="#biodescodificacion") Más información
+                  .content.has-text-right: a(href="#biodescodificacion").scroll Más información
     
     
-    .hr
+    .hr.mid
     #tanatologia
+      include app/img/corner.svg
       .section
         .container
           .columns
@@ -91,16 +92,17 @@ html(lang="es")
               p.sec Existen pérdidas que son reconocidas de manera anticipada y que es posible manejarlas como son todas aquellas pérdidas de seres queridos que han vivido una enfermedad crónica y terminal, que si bien son dolorosas nos permiten decir adiós, perdonar o pedir perdón o agradecer la relación con la persona que está muriendo, aun así, poder tomar una ayuda neutral y objetiva que propicie una relación en la ausencia física de la persona, facilitará el reacomodo y la adaptación ante el vacío de una relación tenida.
               
               p.sec Otro tipo de pérdida, son las muertes inesperadas que tienen un carácter traumático y difícil de superar, el dolor se agudiza y las posibilidades de adaptarnos, acomodarnos ante la ausencia de un ser querido, se extienden a través del tiempo. La ayuda tanatológica posibilita una atención profesional, estableciendo un vínculo nuevo con la persona ausente físicamente.
-              p: a(href="#tanatologia-mas").knowmore Quiero saber más.
-              .box#tanatologia-mas
+              p: a(href="#tanatologiamas").knowmore Quiero saber más.
+              .box#tanatologiamas
                 p Existen duelos que se vuelven complicados y dolorosos en la medida en que la muerte nos despoja de los hijos, de las parejas, de los padres o de los abuelos, incluso, los animales de compañía llamados también mascotas para muchas personas representan la pérdida de un miembro familiar siendo todas estas susceptibles de ser tratadas mediante la asistencia tanatológica.
 
                 p Dentro de todas las formas en que perdemos a un ser querido, ocupan un lugar importante la ruptura de pareja, ya sea por ruptura amorosa, divorcio o viudez, poder entender la pérdida, decir adiós y prepararnos para seguir viviendo, muchas veces, requiere del apoyo profesional.
 
                 p Reconocer que la pérdida y la muerte van tomadas de la mano con aprender a vivir es una oportunidad para verdaderamente encontrar nuestro lugar y camino en la vida.
     
-    .hr
+    .hr.mid
     #biodescodificacion
+      include app/img/corner.svg
       .section
         .container
           .columns
@@ -112,8 +114,8 @@ html(lang="es")
               p.sec Es una herramienta que integra lo biológico (en donde se busca el sentido biológico que tiene la enfermedad), lo psicológico y lo transgeneracional y en donde el descodificador se centra en la búsqueda del conflicto emocional oculto que provoca y alimenta el síntoma, busca aquel conflicto no resuelto que lleva a nuestro inconsciente a poner en marcha un programa biológico de adaptación y supervivencia llamada enfermedad. 
               
               p.sec Vivir un evento impactante emocional en soledad, de manera silenciosa y aislada llega a tener un desajuste en nosotros, desencadenando una enfermedad. También vivir circunstancias que no son de nuestro agrado o situaciones que nos incomoda y no hacemos nada para cambiarlo, nos lleva a lo mismo. Nuestros síntomas, nuestros dolores son una expresión del cuerpo ante algo que nosotros no podemos expresar o no queremos hacerlo o simplemente no nos damos cuenta. La enfermedad es la expresión de un desequilibrio proporcional al volumen conflictual.
-              p: a(href="#biodescodificacion-mas").knowmore Quiero saber más.
-              .box#biodescodificacion-mas
+              p: a(href="#biodescodificacionmas").knowmore Quiero saber más.
+              .box#biodescodificacionmas
                 p Las manifestaciones de nuestra biología, son avisos de nuestro inconsciente (en nuestro inconsciente se encuentra nuestros programas, traumas, nuestros miedos, dolor, todo lo aprendido, todo lo vivido) que albergamos conflictos emocionales activos que no hemos podido o sabido resolver o asimilar. 
                 p Tomar conciencia e identificar el conflicto latente es un paso importante en la descodificación biológica del síntoma y un camino a la recuperación. La conciencia crea tu experiencia de vida.
               
@@ -126,14 +128,17 @@ html(lang="es")
         .container
           .columns: .column: h2 Contacto
           .columns
-            .column.is-6
+            .column.is-5
               form()#contactForm
+                input(type="hidden" name="_to" value="pectu@tanatobioterapia.com")
+                input(type="hidden" name="_subject" value="Mensaje de contacto desde tanatobioterapia.com")
                 input(placeholder="Nombre"  name="Nombre" required).input
-                input(placeholder="Correo" name="Correo" type="email" required).input
+                input(placeholder="Correo" name="_from" type="email" required).input
                 input(placeholder="Teléfono" name="Teléfono").input
-                textarea(placeholder="Mensaje").textarea
+                textarea(placeholder="Mensaje" name="Mensaje" required).textarea
                 button(type="submit").button.button.is-fullwidth Enviar
-            .column.is-6
+              .notification.is-info Gracias por contactarnos. Responderemos lo antes posible.
+            .column.is-6.is-offset-1
               p
                 | #[strong Bajío No 287 Interior 101.]<br>
                 | Roma Sur. Cuauhtemoc.<br>

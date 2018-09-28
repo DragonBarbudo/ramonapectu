@@ -77,6 +77,12 @@ body{
   background-size: contain;
   background-repeat: no-repeat;
   margin: 40px 0;
+  &.mid{
+    margin-top: -50px;
+    margin-bottom: -50px;
+    z-index: 999;
+    position: relative;
+  }
 }
 
 #inicio{
@@ -150,6 +156,7 @@ p{
       font-weight: bold;
     }
   }
+  margin-bottom: 140px;
 }
 
 #tanatologia{
@@ -157,9 +164,17 @@ p{
 }
 #biodescodificacion{
   background-image: url(img/biodescodificacion.jpg);
+  .corner path{ fill: #141414;}
 }
 
 #tanatologia, #biodescodificacion{
+  position: relative;
+  .corner{
+    position: absolute;
+    right: 0;top: 0;
+  }
+
+padding: 160px 0;
 background-size: cover;
 background-position: top left;
 background-repeat: no-repeat;
@@ -197,4 +212,32 @@ background-repeat: no-repeat;
     font-size: 1rem;
     text-align: center;
   }
+}
+
+
+#contacto{
+  padding: 140px 0;
+  .input, textarea{
+    border: none;
+    border-radius: 0;
+    margin: 8px 0;
+    padding: 30px 10px;
+    &::placeholder{color:@blue;}
+  }
+  .button{
+    padding: 30px 10px;
+    line-height: .4;
+    background: @purple;
+    color:@blue;
+    &:hover{background: @purpleB;}
+  }
+  p, a{font-size: 0.9rem; margin-top: 10px;}
+  a{color:@purpleB;}
+  iframe{margin: 10px 0;}
+}
+
+
+.notification.is-info{
+  background: @purpleB;
+  display: none;
 }
