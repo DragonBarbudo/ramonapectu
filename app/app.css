@@ -1,0 +1,68 @@
+.font {
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  background: #EEEDE2;
+}
+/* SLIDER ----------------------- */
+.slider img {
+  width: 100%;
+}
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 9;
+  font-size: 0;
+  background: transparent;
+  border: none;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  margin: -22px 10px 0 10px;
+  cursor: pointer;
+}
+.slick-arrow:focus {
+  outline: none;
+}
+.slick-arrow:after {
+  font: normal normal normal 44px/1 FontAwesome;
+}
+.slick-arrow.slick-prev {
+  left: 0;
+}
+.slick-arrow.slick-prev:after {
+  content: "\f053";
+}
+.slick-arrow.slick-next {
+  right: 0;
+}
+.slick-arrow.slick-next:after {
+  content: "\f054";
+}
+/* SITE ########################################################## */
+.topbar {
+  background: #F3F3F3;
+  font-size: 0.8rem;
+  padding: 8px 0;
+}
+.topbar a {
+  color: #000;
+}
+.navbar {
+  background: #fff;
+  z-index: 99 !important;
+}
+.navbar a {
+  color: #000;
+}
+.navbar a.is-active {
+  background-color: #F3F3F3 !important;
+}
+#nosotros,
+#contacto {
+  height: 800px;
+  border-bottom: 2px solid #000;
+}
+footer {
+  background: #F3F3F3;
+}
+/*# sourceMappingURL=app.css.map */

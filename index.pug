@@ -1,0 +1,23 @@
+include app/_app
+doctype html
+html(lang="es")
+  head
+    +head
+    title Sitio
+    meta(name="description" content="")
+  body
+    +topbar
+    +navigation(false)
+  
+    #inicio
+      .slider
+        div: img(src="//placehold.it/1200x400")
+        div: img(src="//placehold.it/1200x400")
+    
+    section.section#nosotros
+      
+    section.section#contacto
+    
+    +footer
+    
+    +scripts

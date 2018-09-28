@@ -1,0 +1,75 @@
+@b    : #000;
+@w    : #fff;
+@g    : #F3F3F3;
+@purple  : #463C6C;
+@beige   : #EEEDE2;
+@blue    : #91B6D8;
+
+.font{
+  font-family: 'Roboto', sans-serif;
+}
+
+body{
+  background: @beige;  
+}
+
+
+/* SLIDER ----------------------- */
+
+.slider{
+  img{
+    width: 100%;
+  }
+}
+.slick-arrow{
+  position: absolute; top: 50%; z-index: 9;
+  font-size: 0;
+  background: transparent; border: none;
+  color:@w;
+  text-shadow: 0 0 10px rgba(0,0,0,0.4);
+  margin: -22px 10px 0 10px;
+  cursor: pointer;
+  &:focus{outline: none;}
+  &:after{
+    font: normal normal normal 44px/1 FontAwesome;
+  }
+  &.slick-prev{
+    left: 0;
+    &:after{content:"\f053";}
+  }
+  &.slick-next{
+    right: 0;
+    &:after{content:"\f054";}
+  }
+}
+
+
+
+
+
+
+/* SITE ########################################################## */
+.topbar{
+  background: @g;
+  font-size: 0.8rem;
+  padding: 8px 0;
+  a{color:@b;}
+}
+.navbar{
+  background: @w;
+  z-index: 99 !important;
+  a{
+    color:@b;
+    &.is-active{ background-color:@g !important; }
+  }
+
+}
+
+#nosotros, #contacto{
+  height: 800px;
+  border-bottom: 2px solid @b;
+}
+
+footer{
+  background: @g;
+}

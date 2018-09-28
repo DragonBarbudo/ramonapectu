@@ -1,0 +1,81 @@
+mixin head
+  meta(charset="UTF-8")
+  meta(name="viewport", content="width=device-width, initial-scale=1.0")
+  meta(http-equiv="X-UA-Compatible", content="ie=edge")
+  link(rel="stylesheet", href="//cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css")
+  link(rel="stylesheet", href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css")
+  link(rel="stylesheet", href="//unpkg.com/slick-carousel@1.8.1/slick/slick.css")
+  link(rel="stylesheet", href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css")
+  link(rel="stylesheet", href="//fonts.googleapis.com/css?family=Roboto:400,900")
+  link(rel="stylesheet" href="app/app.css")
+    
+    
+    
+
+mixin scripts
+  script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+  script(src="//unpkg.com/slick-carousel@1.8.1/slick/slick.js")
+  script(src="//cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js")
+  script(src="//cdnjs.cloudflare.com/ajax/libs/jquery.sticky/1.0.4/jquery.sticky.min.js")
+  script(src="app/app.js")
+
+
+
+mixin navigation(url)
+  if url
+    - absolute = "index.html"
+  else
+    - absolute = ""
+  .navbar(role="navigation")
+    .container
+      .navbar-brand
+        a(href="#inicio").navbar-item.has-text-centered
+          img(src="app/img/sitio.png", alt="Sitio")
+        .navbar-burger.burger
+          span
+          span
+          span
+      .navbar-menu#menu
+        .navbar-end
+          +navitems(absolute)
+            
+
+mixin navitems(absolute)
+
+  a(href=absolute+"#inicio").navbar-item INICIO
+  a(href=absolute+"#nosotros").navbar-item NOSOTROS
+  a(href=absolute+"#contacto").navbar-item CONTACTO  
+  
+mixin socialnetworks
+  .socialnetworks.columns.is-mobile.has-text-centered
+    a(href="#" target="_blank").column.fb: i.fa.fa-facebook
+    a(href="#" target="_blank").column.tw: i.fa.fa-twitter
+    a(href="" target="_blank").column.li: i.fa.fa-linkedin
+    a(href="" target="_blank").column.in: i.fa.fa-instagram
+    a(href="" target="_blank").column.yt: i.fa.fa-youtube-play
+  
+mixin topbar
+  .topbar: .container: .level
+    .level-left.animated.fadeInLeft
+      .level-item
+        | #[span EMPRESA] - 555555555
+      a(href="mailto:mail@mail.com").level-item mail@mail.com  
+    .level-right
+      +socialnetworks
+
+
+mixin footer
+  footer
+    .section
+      .container
+        .columns
+          .column
+            .is-size-3 Empresa
+            p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nihil molestias, omnis! Laudantium aperiam architecto explicabo reiciendis quae repellendus rerum mollitia, maxime cupiditate earum, nemo, fuga recusandae nihil beatae. Voluptates, in.
+          .column
+            .is-size-3 Sitio
+            +navitems("")
+            
+          .column
+            .is-size-3 Contacto
+            +socialnetworks
